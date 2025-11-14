@@ -12,8 +12,10 @@ import {
   Zap,
   Target,
   TrendingUp,
-  GitBranch
+  GitBranch,
+  Play
 } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Home() {
   return (
@@ -32,6 +34,12 @@ export default function Home() {
             5 spezialisierte AI-Agents haben in einem Abend eine komplette E-Commerce-Plattform entwickelt
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
+            <Link href="/demo">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                <Play className="w-4 h-4 mr-2" />
+                Live Demo
+              </Button>
+            </Link>
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Target className="w-4 h-4 mr-2" />
               Ergebnisse ansehen
