@@ -12,7 +12,8 @@ import {
   Play,
   Loader2,
   ArrowLeft,
-  Sparkles
+  Sparkles,
+  GitBranch
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -337,13 +338,21 @@ export default function Demo() {
       <section className="container mx-auto px-4 py-12">
         <Card className="bg-slate-900/50 border-slate-800">
           <CardContent className="pt-6">
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-4">
               <h3 className="text-lg font-semibold text-white">Wie funktioniert das?</h3>
               <p className="text-sm text-slate-400 max-w-2xl mx-auto">
                 Dies ist eine vereinfachte Simulation des Multi-Agent-Systems. Jeder Agent durchläuft den 
                 "Think Again"-Prozess: Initiale Lösung → Selbst-Kritik → Überarbeitung → Finale Version. 
                 In der echten Implementation nutzen die Agents OpenAI GPT-4 und arbeiten mit echtem Code.
               </p>
+              <div className="pt-4">
+                <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-purple-500/20 text-purple-400 hover:bg-purple-500/10">
+                    <GitBranch className="w-4 h-4 mr-2" />
+                    Vollständigen Code auf GitHub ansehen
+                  </Button>
+                </a>
+              </div>
             </div>
           </CardContent>
         </Card>

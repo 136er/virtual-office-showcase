@@ -44,10 +44,12 @@ export default function Home() {
               <Target className="w-4 h-4 mr-2" />
               Ergebnisse ansehen
             </Button>
-            <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
-              <GitBranch className="w-4 h-4 mr-2" />
-              GitHub Repo
-            </Button>
+            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
+                <GitBranch className="w-4 h-4 mr-2" />
+                GitHub Repo
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -393,16 +395,20 @@ export default function Home() {
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
               Orchestrieren Sie Ihr eigenes Team von AI-Agents und bauen Sie Production-Ready Software in Rekordzeit.
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" variant="secondary">
+          <div className="flex gap-4 justify-center flex-wrap">
+            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
                 <Code className="w-4 h-4 mr-2" />
                 Code ansehen
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+            </a>
+            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
                 <GitBranch className="w-4 h-4 mr-2" />
-                GitHub Repo
+                GitHub-Repo
               </Button>
-            </div>
+            </a>
+          </div>
           </CardContent>
         </Card>
       </section>
