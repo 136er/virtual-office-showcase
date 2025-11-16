@@ -396,12 +396,12 @@ export default function Home() {
               Orchestrieren Sie Ihr eigenes Team von AI-Agents und bauen Sie Production-Ready Software in Rekordzeit.
             </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+            <Link href="/code">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
                 <Code className="w-4 h-4 mr-2" />
                 Code ansehen
               </Button>
-            </a>
+            </Link>
             <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
                 <GitBranch className="w-4 h-4 mr-2" />

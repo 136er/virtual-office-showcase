@@ -46,3 +46,14 @@
 - [x] Update website with GitHub repository links (Hero, CTA, Demo page)
 - [x] Add prominent GitHub buttons throughout the site
 
+
+
+## New Features (In Progress)
+
+- [ ] Code examples page with syntax highlighting
+- [ ] Copy-to-clipboard functionality for code snippets
+- [ ] Navigation to code examples page
+- [ ] Social sharing meta tags (Open Graph, Twitter Cards)
+- [ ] Preview image for social sharing
+- [ ] Push code to GitHub repository
+
