@@ -346,7 +346,7 @@ export default function Demo() {
                 In der echten Implementation nutzen die Agents OpenAI GPT-4 und arbeiten mit echtem Code.
               </p>
               <div className="pt-4">
-                <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="border-purple-500/20 text-purple-400 hover:bg-purple-500/10">
                     <GitBranch className="w-4 h-4 mr-2" />
                     Vollständigen Code auf GitHub ansehen

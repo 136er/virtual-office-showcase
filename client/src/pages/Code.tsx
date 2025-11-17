@@ -519,7 +519,7 @@ export default function Code() {
             Echter, production-ready Code generiert von unseren 5 AI-Agents
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
                 <GitBranch className="w-4 h-4 mr-2" />
                 Vollständiger Code auf GitHub
@@ -607,13 +607,13 @@ export default function Code() {
                 Alle Code-Beispiele, Tests und Dokumentation sind auf GitHub verfügbar.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-                <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
                     <GitBranch className="w-4 h-4 mr-2" />
                     GitHub Repository
                   </Button>
                 </a>
-                <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase/archive/refs/heads/main.zip">
+                <a href="https://github.com/136er/virtual-office-showcase/archive/refs/heads/main.zip">
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
                     <Download className="w-4 h-4 mr-2" />
                     Code herunterladen
