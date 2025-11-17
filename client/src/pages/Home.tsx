@@ -13,7 +13,9 @@ import {
   Target,
   TrendingUp,
   GitBranch,
-  Play
+  Play,
+  Download,
+  BookOpen
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -40,11 +42,17 @@ export default function Home() {
                 Live Demo
               </Button>
             </Link>
+            <a href="https://github.com/136er/virtual-office-showcase/blob/main/GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Getting Started
+              </Button>
+            </a>
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
               <Target className="w-4 h-4 mr-2" />
               Ergebnisse ansehen
             </Button>
-            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
                 <GitBranch className="w-4 h-4 mr-2" />
                 GitHub Repo
@@ -385,6 +393,112 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How to Get Started Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">Wie nutze ich das Projekt?</h2>
+          <p className="text-slate-400 text-lg">Zwei einfache Wege, um loszulegen</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {/* Clone with Git */}
+          <Card className="bg-slate-900/50 border-slate-800">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <GitBranch className="w-5 h-5 text-blue-400" />
+                Mit Git klonen (empfohlen)
+              </CardTitle>
+              <CardDescription className="text-slate-400">
+                Für Entwickler, die Updates erhalten möchten
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="bg-slate-950 p-4 rounded-lg">
+                <code className="text-sm text-green-400 font-mono">
+                  git clone https://github.com/136er/virtual-office-showcase.git
+                </code>
+              </div>
+              <p className="text-sm text-slate-300">
+                Dann installieren und starten:
+              </p>
+              <div className="bg-slate-950 p-4 rounded-lg space-y-2">
+                <code className="text-sm text-green-400 font-mono block">pnpm install</code>
+                <code className="text-sm text-green-400 font-mono block">pnpm dev</code>
+              </div>
+              <a href="https://github.com/136er/virtual-office-showcase/blob/main/GETTING_STARTED.md" target="_blank" rel="noopener noreferrer">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Ausführliche Anleitung
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
+
+          {/* Download as ZIP */}
+          <Card className="bg-slate-900/50 border-slate-800">
+            <CardHeader>
+              <CardTitle className="text-white flex items-center gap-2">
+                <Download className="w-5 h-5 text-green-400" />
+                Als ZIP herunterladen
+              </CardTitle>
+              <CardDescription className="text-slate-400">
+                Schnell und einfach, ohne Git
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-3 text-sm text-slate-300">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-green-400 text-xs font-bold">1</span>
+                  </div>
+                  <p>Gehe zu GitHub Repository</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-green-400 text-xs font-bold">2</span>
+                  </div>
+                  <p>Klicke auf den grünen "Code" Button</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-green-400 text-xs font-bold">3</span>
+                  </div>
+                  <p>Wähle "Download ZIP"</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-green-400 text-xs font-bold">4</span>
+                  </div>
+                  <p>Entpacke die Datei und folge den Schritten oben</p>
+                </div>
+              </div>
+              <a href="https://github.com/136er/virtual-office-showcase/archive/refs/heads/main.zip">
+                <Button className="w-full bg-green-600 hover:bg-green-700">
+                  <Download className="w-4 h-4 mr-2" />
+                  ZIP herunterladen
+                </Button>
+              </a>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Simple Guide Link */}
+        <div className="text-center mt-8">
+          <Badge className="bg-yellow-500/10 text-yellow-400 border-yellow-500/20 text-base px-4 py-2">
+            <BookOpen className="w-4 h-4 mr-2" />
+            Neu im Coding? Lies unsere{" "}
+            <a 
+              href="https://github.com/136er/virtual-office-showcase/blob/main/GETTING_STARTED.md" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="underline hover:text-yellow-300 ml-1"
+            >
+              Schritt-für-Schritt Anleitung
+            </a>
+          </Badge>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16">
         <Card className="bg-gradient-to-br from-blue-600 to-blue-800 border-0">
@@ -402,7 +516,7 @@ export default function Home() {
                 Code ansehen
               </Button>
             </Link>
-            <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
                 <GitBranch className="w-4 h-4 mr-2" />
                 GitHub-Repo
@@ -416,7 +530,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 border-t border-slate-800">
         <div className="text-center text-slate-400 text-sm">
-          <p>Gebaut mit Multi-Agent-System • CrewAI • OpenAI GPT-4</p>
+          <p>Gebaut mit Multi-Agent-System • CrewAI • Google Gemini 2.5 Pro</p>
           <p className="mt-2">Von 0 zum Fullstack-Developer in einem Abend 🚀</p>
         </div>
       </footer>

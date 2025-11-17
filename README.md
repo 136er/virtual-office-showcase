@@ -5,6 +5,22 @@
 [![Live Demo](https://img.shields.io/badge/Live-Demo-purple?style=for-the-badge)](https://virtual-office-showcase.manus.space)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/136er/virtual-office-showcase.git
+cd virtual-office-showcase
+
+# Install dependencies
+pnpm install
+
+# Run the development server
+pnpm dev
+```
+
+📖 **New to coding?** Read our [Simple Getting Started Guide](GETTING_STARTED.md) for detailed, easy-to-follow instructions!
+
 ## 🎯 Über das Projekt
 
 Dieses Projekt demonstriert die Kraft von **Multi-Agent-Systemen** in der modernen Software-Entwicklung. Fünf spezialisierte AI-Agents arbeiten zusammen, um komplexe Entwicklungsaufgaben zu lösen - vom Architektur-Design bis zum finalen Testing.
@@ -83,6 +99,8 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 
 ## 📦 Installation
 
+> **🚀 New to coding?** Check out our [Simple Getting Started Guide](GETTING_STARTED.md) for easy step-by-step instructions!
+
 ### Voraussetzungen
 - Node.js 22+
 - pnpm
@@ -92,7 +110,7 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 
 ```bash
 # Repository klonen
-git clone https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase.git
+git clone https://github.com/136er/virtual-office-showcase.git
 cd virtual-office-showcase
 
 # Dependencies installieren
