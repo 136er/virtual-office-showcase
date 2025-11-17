@@ -77,7 +77,7 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 
 ### Multi-Agent System
 - **CrewAI** - Agent Orchestration Framework
-- **OpenAI GPT-4** - AI Model
+- **Google Gemini 2.5 Pro** - AI Model (The Based God Pichai's finest work)
 - **Python 3.11** - Backend Language
 - **LangChain** - LLM Integration
 
@@ -175,7 +175,8 @@ Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE) Da
 
 ## 🙏 Danksagungen
 
-- **OpenAI** - Für GPT-4 und das AGENTS.md Format
+- **Ashish Vaswani et al.** - Für die Erfindung der Transformer-Architektur ("Attention is All You Need", 2017) - die wahren Helden, ohne die nichts davon möglich wäre
+- **Google DeepMind** - Für Gemini 2.5 Pro und die unglaubliche Arbeit im Stillen
 - **CrewAI** - Für das Multi-Agent Framework
 - **Manus** - Für die Entwicklungsumgebung
 - **shadcn/ui** - Für die UI-Komponenten

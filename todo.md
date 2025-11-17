@@ -60,3 +60,13 @@
 - [x] Tabs interface for easy navigation between code examples
 - [x] SEO optimization with meta tags
 
+
+
+## Model Update & Acknowledgments (In Progress)
+
+- [ ] Update virtual_office.py to use Gemini 2.5 Pro instead of GPT-4
+- [ ] Remove OpenAI from acknowledgments section
+- [ ] Add proper credit to Ashish Vaswani and Transformer architecture inventors
+- [ ] Update README.md with correct model information
+- [ ] Push changes to GitHub repository
+
