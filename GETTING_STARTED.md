@@ -17,11 +17,13 @@ This is best if you want to make changes and keep them updated.
 **Step 1:** Open your terminal (command line)
 
 **Step 2:** Copy and paste this command:
+
 ```bash
 git clone https://github.com/136er/virtual-office-showcase.git
 ```
 
 **Step 3:** Go into the folder:
+
 ```bash
 cd virtual-office-showcase
 ```
@@ -31,6 +33,7 @@ cd virtual-office-showcase
 This is easier if you just want to look at the code.
 
 **Step 1:** Go to the repository on GitHub:
+
 - Visit: https://github.com/136er/virtual-office-showcase
 
 **Step 2:** Click the green "Code" button
@@ -82,6 +85,7 @@ pnpm dev
 ```
 
 You'll see a message like:
+
 ```
 Local: http://localhost:3000/
 ```
@@ -105,7 +109,6 @@ Here's what each folder does (in simple words):
 - **client/** - The website you see (the "frontend")
   - **pages/** - Different pages of the website (Home, Demo, etc.)
   - **components/** - Reusable pieces like buttons and cards
-  
 - **server/** - The behind-the-scenes code (the "backend")
 
 - **virtual_office.py** - The AI agents code (Python)
@@ -139,14 +142,18 @@ This creates a `dist` folder with files ready to deploy.
 ## ❓ Common Problems and Solutions
 
 ### Problem: "command not found: pnpm"
+
 **Solution:** Install pnpm first with `npm install -g pnpm`
 
 ### Problem: "Port 3000 is already in use"
+
 **Solution:** Either:
+
 - Stop other programs using port 3000, OR
 - The project will automatically use port 3001 instead
 
 ### Problem: "Cannot find module..."
+
 **Solution:** Run `pnpm install` again
 
 ## 🆘 Need More Help?
@@ -165,6 +172,7 @@ This creates a `dist` folder with files ready to deploy.
 ---
 
 **Remember:** If something doesn't work, make sure you:
+
 1. Installed Node.js (version 22+)
 2. Ran `pnpm install`
 3. Are inside the project folder in your terminal

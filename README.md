@@ -36,12 +36,14 @@ Dieses Projekt demonstriert die Kraft von **Multi-Agent-Systemen** in der modern
 ## ✨ Features
 
 ### Interaktive Demo
+
 - 🎮 **Live Agent-Simulation** - Sehen Sie die Agents in Aktion
 - 🔄 **"Think Again"-Prozess** - Jeder Agent durchläuft: Initiale Lösung → Selbst-Kritik → Überarbeitung → Finale Version
 - 📝 **Eigene Aufgaben** - Geben Sie Ihre eigenen Entwicklungsaufgaben ein
 - 🎯 **Beispiel-Tasks** - Vorgefertigte Aufgaben zum schnellen Testen
 
 ### Showcase-Website
+
 - 🌐 **Moderne UI** - Dunkles Theme mit Gradient-Hintergrund
 - 📱 **Responsive Design** - Funktioniert auf allen Geräten
 - ⚡ **Performant** - React 19 + Vite für blitzschnelle Ladezeiten
@@ -52,30 +54,35 @@ Dieses Projekt demonstriert die Kraft von **Multi-Agent-Systemen** in der modern
 In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwickelt:
 
 ### Architektur
+
 - Skaliert auf 100.000+ gleichzeitige Nutzer
 - Microservices-Architektur
 - Load Balancer & Caching-Layer
 - Horizontal skalierbar
 
 ### Backend
+
 - Production-ready Payment-API mit Stripe
 - Retry-Logic & Circuit Breaker
 - Celery für asynchrone Tasks
 - 95%+ Test Coverage
 
 ### Frontend
+
 - React Checkout-Page < 100ms Render-Zeit
 - WCAG AA konform
 - Optimierte Bundle-Size
 - Mobile-First Design
 
 ### Security
+
 - PCI DSS compliant
 - Alle OWASP Top 10 geprüft
 - Rate Limiting & Input Sanitization
 - Komplettes Security-Audit
 
 ### Testing
+
 - Unit, Integration & E2E Tests
 - 95%+ Code Coverage
 - Performance-Tests
@@ -84,6 +91,7 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 19** - UI Framework
 - **TypeScript** - Type Safety
 - **Vite** - Build Tool
@@ -92,6 +100,7 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 - **Wouter** - Routing
 
 ### Multi-Agent System
+
 - **CrewAI** - Agent Orchestration Framework
 - **Google Gemini 2.5 Pro** - AI Model (The Based God Pichai's finest work)
 - **Python 3.11** - Backend Language
@@ -102,6 +111,7 @@ In **einem Abend** haben die 5 Agents eine komplette E-Commerce-Plattform entwic
 > **🚀 New to coding?** Check out our [Simple Getting Started Guide](GETTING_STARTED.md) for easy step-by-step instructions!
 
 ### Voraussetzungen
+
 - Node.js 22+
 - pnpm
 - Git
@@ -213,4 +223,3 @@ Erstellt mit ❤️ von einem virtuellen Büro voller AI-Agents
 ---
 
 **⭐ Wenn dir dieses Projekt gefällt, gib ihm einen Star!**
-

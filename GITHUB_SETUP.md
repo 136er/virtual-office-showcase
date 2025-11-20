@@ -13,6 +13,7 @@
 3. **Klicke auf "Create repository"**
 
 4. **Pushe den Code**:
+
 ```bash
 cd /home/ubuntu/virtual-office-showcase
 git remote add origin https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase.git
@@ -39,6 +40,7 @@ gh repo create virtual-office-showcase \
 ## ✅ Alles ist bereit!
 
 Der Code wurde bereits committet und ist bereit zum Pushen:
+
 - Latest commit: "Add code examples page, social sharing meta tags, and complete website features"
 - Branch: main
 - Alle Dateien sind staged und committed
@@ -46,6 +48,7 @@ Der Code wurde bereits committet und ist bereit zum Pushen:
 ## Was bereits vorbereitet ist
 
 ✅ **README.md** - Vollständige Dokumentation mit:
+
 - Projekt-Übersicht
 - Features
 - Tech Stack
@@ -54,11 +57,13 @@ Der Code wurde bereits committet und ist bereit zum Pushen:
 - Beitragsrichtlinien
 
 ✅ **Git Repository** - Bereits initialisiert mit:
+
 - Initial Commit
 - Alle Projektdateien
 - .gitignore (automatisch von Vite)
 
 ✅ **Website-Links** - GitHub-Links sind bereits auf der Website:
+
 - Hero-Bereich: "GitHub Repo" Button
 - CTA-Bereich: "Code ansehen" + "GitHub-Repo" Buttons
 - Demo-Seite: "Vollständigen Code auf GitHub ansehen" Button
@@ -66,6 +71,7 @@ Der Code wurde bereits committet und ist bereit zum Pushen:
 ## Nach dem Push
 
 Die Website-Links funktionieren sofort, da sie bereits auf den korrekten Repository-Pfad zeigen:
+
 ```
 https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase
 ```
@@ -81,14 +87,16 @@ https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase
 ## Troubleshooting
 
 ### "Permission denied" beim Push
+
 → Stelle sicher, dass du Zugriff auf das Repository hast
 → Verwende Personal Access Token statt Passwort
 
 ### Repository existiert bereits
+
 → Lösche das alte Repository oder verwende einen anderen Namen
 → Oder pushe zu einem bestehenden Repository:
+
 ```bash
 git remote set-url origin https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase.git
 git push -u origin main
 ```
-
