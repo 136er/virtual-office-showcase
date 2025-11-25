@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
-import { 
-  Briefcase, 
-  Code, 
-  Palette, 
-  Shield, 
+import {
+  Briefcase,
+  Code,
+  Palette,
+  Shield,
   CheckCircle,
   Play,
   Loader2,
   ArrowLeft,
   Sparkles,
-  GitBranch
+  GitBranch,
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -30,37 +36,38 @@ const agents: Agent[] = [
     id: "architect",
     role: "Software Architekt",
     icon: Briefcase,
-    backstory: "100 Jahre Erfahrung. Designed Systeme für maximale Skalierbarkeit.",
-    color: "blue"
+    backstory:
+      "100 Jahre Erfahrung. Designed Systeme für maximale Skalierbarkeit.",
+    color: "blue",
   },
   {
     id: "backend",
     role: "Backend Entwickler",
     icon: Code,
     backstory: "Python/Django Guru. Schreibt production-ready Code.",
-    color: "green"
+    color: "green",
   },
   {
     id: "frontend",
     role: "Frontend Entwickler",
     icon: Palette,
     backstory: "React-Weltmeister. Performance-besessen.",
-    color: "purple"
+    color: "purple",
   },
   {
     id: "security",
     role: "Security Spezialist",
     icon: Shield,
     backstory: "Ex-NSA. Findet jede Sicherheitslücke.",
-    color: "red"
+    color: "red",
   },
   {
     id: "qa",
     role: "QA Engineer",
     icon: CheckCircle,
     backstory: "Perfektionist. Ungetesteter Code ist kaputter Code.",
-    color: "yellow"
-  }
+    color: "yellow",
+  },
 ];
 
 interface AgentResponse {
@@ -73,7 +80,7 @@ const exampleTasks = [
   "Baue eine Todo-App mit React und TypeScript",
   "Erstelle eine REST API für User-Management",
   "Implementiere ein Login-System mit JWT",
-  "Designe eine Landing Page für ein SaaS-Produkt"
+  "Designe eine Landing Page für ein SaaS-Produkt",
 ];
 
 export default function Demo() {
@@ -84,94 +91,114 @@ export default function Demo() {
 
   const simulateAgentWork = async (agent: Agent, taskDescription: string) => {
     setCurrentAgent(agent.id);
-    
+
     // Simulate "Think Again" process
     const steps = [
       { step: "1. Initiale Analyse", delay: 1000 },
       { step: "2. Selbst-Kritik", delay: 1500 },
       { step: "3. Überarbeitung", delay: 1200 },
-      { step: "4. Finale Lösung", delay: 800 }
+      { step: "4. Finale Lösung", delay: 800 },
     ];
 
     for (const { step, delay } of steps) {
       await new Promise(resolve => setTimeout(resolve, delay));
-      
+
       let content = "";
-      
+
       // Generate realistic responses based on agent role and task
       if (agent.id === "architect") {
         if (step === "1. Initiale Analyse") {
-          content = "Analysiere Anforderungen... System benötigt Frontend, Backend, Datenbank.";
+          content =
+            "Analysiere Anforderungen... System benötigt Frontend, Backend, Datenbank.";
         } else if (step === "2. Selbst-Kritik") {
-          content = "Kritik: Skalierung nicht berücksichtigt. Was bei 10k Usern?";
+          content =
+            "Kritik: Skalierung nicht berücksichtigt. Was bei 10k Usern?";
         } else if (step === "3. Überarbeitung") {
-          content = "Füge Load Balancer, Caching-Layer und Microservices-Architektur hinzu.";
+          content =
+            "Füge Load Balancer, Caching-Layer und Microservices-Architektur hinzu.";
         } else {
-          content = "✅ Architektur komplett: React Frontend, Django Backend, PostgreSQL, Redis Cache, horizontal skalierbar.";
+          content =
+            "✅ Architektur komplett: React Frontend, Django Backend, PostgreSQL, Redis Cache, horizontal skalierbar.";
         }
       } else if (agent.id === "backend") {
         if (step === "1. Initiale Analyse") {
-          content = "Schreibe API-Endpoints... Basis CRUD-Operationen implementiert.";
+          content =
+            "Schreibe API-Endpoints... Basis CRUD-Operationen implementiert.";
         } else if (step === "2. Selbst-Kritik") {
-          content = "Kritik: Keine Error Handling, keine Validierung, keine Tests.";
+          content =
+            "Kritik: Keine Error Handling, keine Validierung, keine Tests.";
         } else if (step === "3. Überarbeitung") {
-          content = "Füge Input-Validierung, Try-Catch-Blöcke, Logging und Unit Tests hinzu.";
+          content =
+            "Füge Input-Validierung, Try-Catch-Blöcke, Logging und Unit Tests hinzu.";
         } else {
-          content = "✅ API komplett: RESTful Endpoints, Error Handling, Validierung, 95% Test Coverage.";
+          content =
+            "✅ API komplett: RESTful Endpoints, Error Handling, Validierung, 95% Test Coverage.";
         }
       } else if (agent.id === "frontend") {
         if (step === "1. Initiale Analyse") {
           content = "Erstelle UI-Komponenten... Basis-Layout mit React fertig.";
         } else if (step === "2. Selbst-Kritik") {
-          content = "Kritik: Performance nicht optimal, keine Accessibility, Bundle zu groß.";
+          content =
+            "Kritik: Performance nicht optimal, keine Accessibility, Bundle zu groß.";
         } else if (step === "3. Überarbeitung") {
-          content = "Optimiere mit React.memo, lazy loading, ARIA-Labels, Code-Splitting.";
+          content =
+            "Optimiere mit React.memo, lazy loading, ARIA-Labels, Code-Splitting.";
         } else {
-          content = "✅ UI komplett: < 100ms Render-Zeit, WCAG AA, optimierte Bundle-Size.";
+          content =
+            "✅ UI komplett: < 100ms Render-Zeit, WCAG AA, optimierte Bundle-Size.";
         }
       } else if (agent.id === "security") {
         if (step === "1. Initiale Analyse") {
           content = "Scanne Code nach Schwachstellen... Erste Analyse läuft.";
         } else if (step === "2. Selbst-Kritik") {
-          content = "Gefunden: SQL Injection möglich, XSS-Risiko, keine Rate Limiting.";
+          content =
+            "Gefunden: SQL Injection möglich, XSS-Risiko, keine Rate Limiting.";
         } else if (step === "3. Überarbeitung") {
-          content = "Empfehle: Prepared Statements, Input Sanitization, Rate Limiter, HTTPS.";
+          content =
+            "Empfehle: Prepared Statements, Input Sanitization, Rate Limiter, HTTPS.";
         } else {
-          content = "✅ Security-Audit komplett: Alle OWASP Top 10 geprüft, Fixes dokumentiert.";
+          content =
+            "✅ Security-Audit komplett: Alle OWASP Top 10 geprüft, Fixes dokumentiert.";
         }
       } else if (agent.id === "qa") {
         if (step === "1. Initiale Analyse") {
           content = "Erstelle Test-Plan... Identifiziere Test-Szenarien.";
         } else if (step === "2. Selbst-Kritik") {
-          content = "Kritik: Nur Happy Path getestet, Edge Cases fehlen, keine E2E Tests.";
+          content =
+            "Kritik: Nur Happy Path getestet, Edge Cases fehlen, keine E2E Tests.";
         } else if (step === "3. Überarbeitung") {
-          content = "Füge Edge Case Tests, Integration Tests, E2E Tests mit Cypress hinzu.";
+          content =
+            "Füge Edge Case Tests, Integration Tests, E2E Tests mit Cypress hinzu.";
         } else {
-          content = "✅ Test-Suite komplett: Unit, Integration, E2E, 95%+ Coverage.";
+          content =
+            "✅ Test-Suite komplett: Unit, Integration, E2E, 95%+ Coverage.";
         }
       }
 
-      setResponses(prev => [...prev, {
-        agent: agent.role,
-        step,
-        content
-      }]);
+      setResponses(prev => [
+        ...prev,
+        {
+          agent: agent.role,
+          step,
+          content,
+        },
+      ]);
     }
-    
+
     setCurrentAgent(null);
   };
 
   const runDemo = async () => {
     if (!task.trim()) return;
-    
+
     setIsRunning(true);
     setResponses([]);
-    
+
     // Run agents sequentially
     for (const agent of agents) {
       await simulateAgentWork(agent, task);
     }
-    
+
     setIsRunning(false);
   };
 
@@ -185,7 +212,10 @@ export default function Demo() {
       {/* Header */}
       <header className="container mx-auto px-4 py-8">
         <Link href="/">
-          <Button variant="ghost" className="text-slate-400 hover:text-white mb-4">
+          <Button
+            variant="ghost"
+            className="text-slate-400 hover:text-white mb-4"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Zurück
           </Button>
@@ -199,7 +229,8 @@ export default function Demo() {
             Probieren Sie das Agent-System
           </h1>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
-            Geben Sie eine Aufgabe ein und sehen Sie, wie die 5 Agents zusammenarbeiten
+            Geben Sie eine Aufgabe ein und sehen Sie, wie die 5 Agents
+            zusammenarbeiten
           </p>
         </div>
       </header>
@@ -220,13 +251,15 @@ export default function Demo() {
                 <Textarea
                   placeholder="z.B. Baue eine Todo-App mit React und TypeScript..."
                   value={task}
-                  onChange={(e) => setTask(e.target.value)}
+                  onChange={e => setTask(e.target.value)}
                   className="min-h-[120px] bg-slate-950 border-slate-700 text-white"
                   disabled={isRunning}
                 />
-                
+
                 <div className="space-y-2">
-                  <p className="text-sm text-slate-400">Oder wählen Sie ein Beispiel:</p>
+                  <p className="text-sm text-slate-400">
+                    Oder wählen Sie ein Beispiel:
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {exampleTasks.map((example, i) => (
                       <Button
@@ -270,21 +303,29 @@ export default function Demo() {
                 <CardTitle className="text-white">Agent-Status</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                {agents.map((agent) => (
+                {agents.map(agent => (
                   <div
                     key={agent.id}
                     className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${
                       currentAgent === agent.id
-                        ? 'bg-purple-500/10 border border-purple-500/20'
-                        : 'bg-slate-950/50'
+                        ? "bg-purple-500/10 border border-purple-500/20"
+                        : "bg-slate-950/50"
                     }`}
                   >
-                    <agent.icon className={`w-5 h-5 ${
-                      currentAgent === agent.id ? 'text-purple-400' : 'text-slate-500'
-                    }`} />
+                    <agent.icon
+                      className={`w-5 h-5 ${
+                        currentAgent === agent.id
+                          ? "text-purple-400"
+                          : "text-slate-500"
+                      }`}
+                    />
                     <div className="flex-1">
-                      <div className="font-medium text-white text-sm">{agent.role}</div>
-                      <div className="text-xs text-slate-400">{agent.backstory}</div>
+                      <div className="font-medium text-white text-sm">
+                        {agent.role}
+                      </div>
+                      <div className="text-xs text-slate-400">
+                        {agent.backstory}
+                      </div>
                     </div>
                     {currentAgent === agent.id && (
                       <Loader2 className="w-4 h-4 text-purple-400 animate-spin" />
@@ -308,7 +349,9 @@ export default function Demo() {
                 {responses.length === 0 ? (
                   <div className="text-center py-12 text-slate-500">
                     <Sparkles className="w-12 h-12 mx-auto mb-4 opacity-50" />
-                    <p>Starten Sie die Demo, um die Agents in Aktion zu sehen</p>
+                    <p>
+                      Starten Sie die Demo, um die Agents in Aktion zu sehen
+                    </p>
                   </div>
                 ) : (
                   <div className="space-y-4 max-h-[600px] overflow-y-auto pr-2">
@@ -318,12 +361,19 @@ export default function Demo() {
                         className="bg-slate-950/50 p-4 rounded-lg border border-slate-800 animate-in fade-in slide-in-from-bottom-2 duration-300"
                       >
                         <div className="flex items-center gap-2 mb-2">
-                          <Badge variant="outline" className="text-xs border-purple-500/20 text-purple-400">
+                          <Badge
+                            variant="outline"
+                            className="text-xs border-purple-500/20 text-purple-400"
+                          >
                             {response.agent}
                           </Badge>
-                          <span className="text-xs text-slate-500">{response.step}</span>
+                          <span className="text-xs text-slate-500">
+                            {response.step}
+                          </span>
                         </div>
-                        <p className="text-sm text-slate-300">{response.content}</p>
+                        <p className="text-sm text-slate-300">
+                          {response.content}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -339,15 +389,26 @@ export default function Demo() {
         <Card className="bg-slate-900/50 border-slate-800">
           <CardContent className="pt-6">
             <div className="text-center space-y-4">
-              <h3 className="text-lg font-semibold text-white">Wie funktioniert das?</h3>
+              <h3 className="text-lg font-semibold text-white">
+                Wie funktioniert das?
+              </h3>
               <p className="text-sm text-slate-400 max-w-2xl mx-auto">
-                Dies ist eine vereinfachte Simulation des Multi-Agent-Systems. Jeder Agent durchläuft den 
-                "Think Again"-Prozess: Initiale Lösung → Selbst-Kritik → Überarbeitung → Finale Version. 
-                In der echten Implementation nutzen die Agents OpenAI GPT-4 und arbeiten mit echtem Code.
+                Dies ist eine vereinfachte Simulation des Multi-Agent-Systems.
+                Jeder Agent durchläuft den "Think Again"-Prozess: Initiale
+                Lösung → Selbst-Kritik → Überarbeitung → Finale Version. In der
+                echten Implementation nutzen die Agents OpenAI GPT-4 und
+                arbeiten mit echtem Code.
               </p>
               <div className="pt-4">
-                <a href="https://github.com/MyLastTryCollegeVSRazor/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-purple-500/20 text-purple-400 hover:bg-purple-500/10">
+                <a
+                  href="https://github.com/136er/virtual-office-showcase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant="outline"
+                    className="border-purple-500/20 text-purple-400 hover:bg-purple-500/10"
+                  >
                     <GitBranch className="w-4 h-4 mr-2" />
                     Vollständigen Code auf GitHub ansehen
                   </Button>
@@ -360,4 +421,3 @@ export default function Demo() {
     </div>
   );
 }
-
