@@ -1,12 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowLeft, Copy, Check, GitBranch, Download } from "lucide-react";
 import { Link } from "wouter";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const codeExamples = {
   architecture: {
@@ -50,7 +56,7 @@ const codeExamples = {
 - SSL/TLS: Enforced
 - WAF: CloudFlare
 - DDoS Protection: Layer 7
-- Compliance: PCI DSS, GDPR`
+- Compliance: PCI DSS, GDPR`,
   },
   backend: {
     title: "Payment API (Django/Python)",
@@ -150,7 +156,7 @@ def create_payment(request):
         logger.exception("Payment creation failed")
         return JsonResponse({
             'error': 'Internal server error'
-        }, status=500)`
+        }, status=500)`,
   },
   frontend: {
     title: "Checkout Component (React/TypeScript)",
@@ -320,7 +326,7 @@ export const CheckoutPage: React.FC<CheckoutProps> = React.memo(({
   );
 });
 
-CheckoutPage.displayName = 'CheckoutPage';`
+CheckoutPage.displayName = 'CheckoutPage';`,
   },
   testing: {
     title: "Test Suite (Pytest)",
@@ -481,8 +487,8 @@ class TestPaymentAPI:
         
         result = benchmark(create_payment)
         assert result.status_code == 202
-        # Benchmark automatically fails if > 100ms`
-  }
+        # Benchmark automatically fails if > 100ms`,
+  },
 };
 
 export default function Code() {
@@ -494,7 +500,7 @@ export default function Code() {
       setCopiedCode(id);
       setTimeout(() => setCopiedCode(null), 2000);
     } catch (err) {
-      console.error('Failed to copy:', err);
+      console.error("Failed to copy:", err);
     }
   };
 
@@ -503,7 +509,10 @@ export default function Code() {
       {/* Header */}
       <header className="container mx-auto px-4 py-8">
         <Link href="/">
-          <Button variant="ghost" className="text-slate-400 hover:text-white mb-4">
+          <Button
+            variant="ghost"
+            className="text-slate-400 hover:text-white mb-4"
+          >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Zurück
           </Button>
@@ -519,8 +528,15 @@ export default function Code() {
             Echter, production-ready Code generiert von unseren 5 AI-Agents
           </p>
           <div className="flex gap-4 justify-center">
-            <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-slate-700 text-slate-300 hover:bg-slate-800">
+            <a
+              href="https://github.com/136er/virtual-office-showcase"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="border-slate-700 text-slate-300 hover:bg-slate-800"
+              >
                 <GitBranch className="w-4 h-4 mr-2" />
                 Vollständiger Code auf GitHub
               </Button>
@@ -545,12 +561,17 @@ export default function Code() {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <div>
-                      <CardTitle className="text-white">{example.title}</CardTitle>
+                      <CardTitle className="text-white">
+                        {example.title}
+                      </CardTitle>
                       <CardDescription className="text-slate-400">
-                        {key === 'architecture' && 'Software Architekt - 100 Jahre Erfahrung'}
-                        {key === 'backend' && 'Backend Entwickler - Python/Django Guru'}
-                        {key === 'frontend' && 'Frontend Entwickler - React-Weltmeister'}
-                        {key === 'testing' && 'QA Engineer - Perfektionist'}
+                        {key === "architecture" &&
+                          "Software Architekt - 100 Jahre Erfahrung"}
+                        {key === "backend" &&
+                          "Backend Entwickler - Python/Django Guru"}
+                        {key === "frontend" &&
+                          "Frontend Entwickler - React-Weltmeister"}
+                        {key === "testing" && "QA Engineer - Perfektionist"}
                       </CardDescription>
                     </div>
                     <Button
@@ -580,8 +601,8 @@ export default function Code() {
                       style={vscDarkPlus}
                       customStyle={{
                         margin: 0,
-                        borderRadius: '0.5rem',
-                        fontSize: '0.875rem',
+                        borderRadius: "0.5rem",
+                        fontSize: "0.875rem",
                       }}
                       showLineNumbers
                     >
@@ -604,17 +625,29 @@ export default function Code() {
                 Möchten Sie den kompletten Code sehen?
               </h2>
               <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-                Alle Code-Beispiele, Tests und Dokumentation sind auf GitHub verfügbar.
+                Alle Code-Beispiele, Tests und Dokumentation sind auf GitHub
+                verfügbar.
               </p>
               <div className="flex gap-4 justify-center flex-wrap">
-                <a href="https://github.com/136er/virtual-office-showcase" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
+                <a
+                  href="https://github.com/136er/virtual-office-showcase"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    size="lg"
+                    className="bg-white text-blue-600 hover:bg-blue-50"
+                  >
                     <GitBranch className="w-4 h-4 mr-2" />
                     GitHub Repository
                   </Button>
                 </a>
                 <a href="https://github.com/136er/virtual-office-showcase/archive/refs/heads/main.zip">
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-white text-white hover:bg-blue-700"
+                  >
                     <Download className="w-4 h-4 mr-2" />
                     Code herunterladen
                   </Button>
@@ -627,4 +660,3 @@ export default function Code() {
     </div>
   );
 }
-
